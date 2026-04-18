@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponpes Tarbiyatul Ulum Lisshibyan Pekuwon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        biru: '#E0F7FA',
+                        birutua: '#006064',
+                        birumed: '#4DD0E1',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            .animate-fade {
+                animation: fadeIn 1s ease-in;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .bg-joglo {
+                background-image: url('https://i.ibb.co.com/sJtYkKJb/IMG-20260418-000219.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            .overlay-transparan {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            .img-hover {
+                transition: all 0.3s ease;
+            }
+            .img-hover:hover {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body class="font-poppins bg-biru/50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-birutua text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://i.ibb.co.com/QxSj0bG/IMG-20260417-235653.png" alt="Logo Ponpes" class="h-14 w-auto">
+                <h1 class="text-lg md:text-xl font-bold">Ponpes Tarbiyatul Ulum Lisshibyan</h1>
+            </div>
+            <div class="hidden md:flex gap-6">
+                <a href="#beranda" class="hover:text-biru transition">Beranda</a>
+                <a href="#profil-pesantren" class="hover:text-biru transition">Profil Pesantren</a>
+                <a href="#profil" class="hover:text-biru transition">Profil</a>
+                <a href="#kurikulum" class="hover:text-biru transition">Kurikulum</a>
+                <a href="#galeri" class="hover:text-biru transition">Galeri</a>
+                <a href="#kontak" class="hover:text-biru transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SLIDER HERO -->
+    <section id="beranda" class="relative h-[90vh] overflow-hidden bg-joglo">
+        <div class="absolute inset-0 overlay-transparan"></div>
+        <div class="swiper mySwiper h-full relative z-10">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white animate-fade">
+                        <img src="https://i.ibb.co.com/QxSj0bG/IMG-20260417-235653.png" alt="Logo" class="mx-auto mb-6 h-40">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">PONPES TARBIYATUL ULUM LISSHIBYAN</h1>
+                        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-shadow">Mencetak Generasi Qur'ani, Berpegang Teguh pada Salaf, Berhias Akhlak Terpuji Sejak Usia Dini.</p>
+                        <a href="https://bit.ly/pendaftaransantribaruponpesshibyan" target="_blank" class="bg-white text-birutua px-8 py-3 rounded-full font-bold text-lg hover:bg-biru transition">DAFTAR SANTRI BARU</a>
+                    </div>
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white animate-fade">
+                        <h2 class="text-2xl md:text-3xl mb-2 font-light">Pendidikan Berkualitas</h2>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">ILMU AGAMA & UMUM</h1>
+                        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Kurikulum seimbang untuk membentuk karakter yang berakhlakul karimah.</p>
+                        <a href="#profil-pesantren" class="bg-white text-birutua px-8 py-3 rounded-full font-bold text-lg hover:bg-biru transition">LIHAT PROFIL</a>
+                    </div>
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white animate-fade">
+                        <h2 class="text-2xl md:text-3xl mb-2 font-light">Kegiatan Santri</h2>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">KEGIATAN HARIAN</h1>
+                        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Dzibaiyyah, Ngaji Kitab, Tahfidz, Tartil, Ziaroh, Olahraga, dan Upacara.</p>
+                        <a href="#galeri" class="bg-white text-birutua px-8 py-3 rounded-full font-bold text-lg hover:bg-biru transition">LIHAT GALERI</a>
+                    </div>
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white animate-fade">
+                        <h2 class="text-2xl md:text-3xl mb-2 font-light">Bimbingan & Motivasi</h2>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">WEJANGAN IBU NYAI</h1>
+                        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Dibimbing langsung oleh Ibu Nyai Nur Mumayyizatun, S.Pd., dengan penuh kasih sayang.</p>
+                        <a href="#kontak" class="bg-white text-birutua px-8 py-3 rounded-full font-bold text-lg hover:bg-biru transition">HUBUNGI KAMI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+        </div>
+    </section>
+
+    <!-- PROFIL PESANTREN -->
+    <section id="profil-pesantren" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <i class="fas fa-book-open text-6xl text-birutua mb-6 opacity-80"></i>
+                <h3 class="text-2xl font-semibold mb-4 text-birutua">Profil Pesantren</h3>
+                <p class="text-lg leading-relaxed">
+                    <strong>PONDOK PESANTREN TARBIYATUL ULUM LISSHIBYAN</strong> merupakan pondok pesantren bagi anak-anak usia sekolah dasar (SD/MI). 
+                    Ponpes ini merupakan pondok cabang dari <strong>Tarbiyatul Ulum Pusat</strong>. Didirikan pada tahun <strong>2019 M</strong> di bawah naungan <strong>Yayasan Tarbiyatul Ulum Pekuwon</strong>.
+                    <br><br>
+                    Berdiri dilatarbelakangi oleh keinginan wali santri yang ingin anaknya masuk pesantren dan mengenal ilmu agama sejak usia dini. 
+                    Kami memberikan pendidikan yang seimbang antara <strong>ilmu agama</strong> dan <strong>ilmu umum</strong>, dengan tujuan membentuk karakter santri 
+                    yang berakhlakul karimah dan pandai membaca Al-Qur'an.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFIL PENGASUH -->
+    <section id="profil" class="py-16 bg-biru/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-birutua">Profil Pengasuh</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-user-tie text-5xl text-birumed"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">KH. Chasan Bisri Syamsuri</h3>
+                    <div class="space-y-3 text-base">
+                        <p>Beliau adalah pendiri Pondok Pesantren Tarbiyatul 'Ulum di Pekuwon. Beliau dikenal sebagai ulama yang fokus pada pendidikan agama, pengajaran kitab kuning, dan pembinaan moral masyarakat.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Mendirikan dan mengelola Yayasan Tarbiyatul Ulum Pekuwon.</li>
+                            <li>Aktif mengajar kitab-kitab klasik, salah satunya Tafsir Al-Baidhawi.</li>
+                            <li>Menjadi tokoh penting penyebaran ilmu agama di wilayah Rengel dan sekitarnya.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-user-graduate text-5xl text-birumed"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Ibu Nyai Nur Mumayyizatun, S.Pd.</h3>
+                    <div class="space-y-3 text-base">
+                        <p>Beliau adalah tokoh pendidikan dan agama yang berperan penting dalam mengelola pendidikan keislaman di Yayasan Tarbiyatul Ulum Pekuwon.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Aktif memberikan bimbingan, arahan, dan wejangan kepada santri.</li>
+                            <li>Fokus pada pembentukan karakter dan kemampuan baca tulis Al-Qur'an.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white p-8 rounded-2xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-birutua border-b-2 border-birumed/30 pb-2">Visi Kami</h3>
+                <p class="mb-4 text-lg">Mencetak Generasi Qur'ani, Berpegang Teguh pada Salaf, Berhias Akhlak Terpuji Sejak Usia Dini.</p>
+                
+                <h3 class="text-xl font-bold mb-4 text-birutua border-b-2 border-birumed/30 pb-2 mt-6">Misi Kami</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Pendidikan seimbang antara Ilmu Agama dan Ilmu Umum</li>
+                    <li>Program Tahfidz & Pemantapan Baca Al-Qur'an</li>
+                    <li>Penanaman nilai Akhlak, Adab, dan Sopan Santun</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- KURIKULUM -->
+    <section id="kurikulum" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-birutua">Sistem Kurikulum Shibyan</h2>
+            <p class="text-center text-lg mb-10 max-w-3xl mx-auto">Kurikulum pendidikan Shibyan diklasifikasikan ke dalam tiga program utama dengan fokus kompetensi yang berbeda:</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- BOX 1: MDTA -->
+                <div class="bg-biru/30 p-8 rounded-2xl shadow-lg border-t-4 border-birutua">
+                    <h3 class="text-2xl font-bold text-birutua mb-4 text-center">📚 MDTA</h3>
+                    <h4 class="font-semibold text-lg mb-4 text-center">(Madrasah Diniyah Takmiliyah Awwaliyah)</h4>
+                    <p class="mb-4">Program ini terdiri dari 5 jenjang kelas dengan fokus utama pada penguasaan literasi Pegon, teknik Maknani, dan dasar-dasar Ilmu Nahwu.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="bg-white p-3 rounded shadow"><strong>Kelas SP:</strong> Pengenalan dasar huruf Hijaiyah dan huruf Pegon.</div>
+                        <div class="bg-white p-3 rounded shadow"><strong>Kelas 1 Adna:</strong> Mampu membaca dan menulis tulisan Pegon secara mandiri.</div>
+                        <div class="bg-white p-3 rounded shadow"><strong>Kelas 2 Adna:</strong> Lancar membaca Pegon dan mahir menulis Pegon melalui metode dikte (imla').</div>
+                        <div class="bg-white p-3 rounded shadow"><strong>Kelas 3 Adna:</strong> Mulai latihan memberikan makna (maknani) kitab serta pengenalan dasar Nahwu & Shorof.</div>
+                        <div class="bg-white p-3 rounded shadow"><strong>Kelas 4 Adna:</strong> Memahami kaidah dasar Nahwu & Shorof serta lancar menerapkan teknik maknani.</div>
+                    </div>
+                </div>
+
+                <!-- BOX 2: MMQ -->
+                <div class="bg-biru/30 p-8 rounded-2xl shadow-lg border-t-4 border-birutua">
+                    <h3 class="text-2xl font-bold text-birutua mb-4 text-center">🕌 MMQ</h3>
+                    <h4 class="font-semibold text-lg mb-4 text-center">(Majelis Murottil Al-Qur'an)</h4>
+                    <p class="mb-6">Program ini difokuskan sebagai wadah penggemblengan hafalan santri dengan target pencapaian:</p>
+                    <div class="bg-white p-6 rounded-xl shadow space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 text-xl mt-1"></i>
+                            <div>
+                                <strong class="block text-birutua">Prioritas Utama</strong>
+                                Hafal doa-doa harian dan surat-surat pendek.
+                            </div>
+                        </div>
+                        <div class="flex items-startgap-3">
+                            <i class="fas fa-star text-yellow-500 text-xl mt-1"></i>
+                            <div>
+                                <strong class="block text-birutua">Target Tambahan</strong>
+                                Diupayakan mampu menyelesaikan hafalan Juz 'Amma (Juz 30).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOX 3: MTQ -->
+                <div class="bg-biru/30 p-8 rounded-2xl shadow-lg border-t-4 border-birutua">
+                    <h3 class="text-2xl font-bold text-birutua mb-4 text-center">🎓 MTQ</h3>
+                    <h4 class="font-semibold text-lg mb-4 text-center">(Majelis Tartil Al-Qur'an)</h4>
+                    <p class="mb-6">Program ini berfokus pada perbaikan dan kualitas bacaan santri, meliputi:</p>
+                    <ul class="bg-white p-6 rounded-xl shadow space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span>Pembenaran panjang dan pendek bacaan (mad dan qashr).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span>Keserasian dan kestabilan irama dalam membaca.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span>Pengenalan dan latihan dasar makhrajul huruf (tempat keluarnya huruf).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section id="galeri" class="py-16 bg-biru/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-birutua">Galeri Kegiatan</h2>
+
+            <!-- Kegiatan Dzibaiyyah -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Kegiatan Dzibaiyyah</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/wNFgZTdG/IMG-20260417-WA0012.jpg" alt="Dzibaiyyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/MDrtyqrx/IMG-20260417-WA0014.jpg" alt="Dzibaiyyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/pBQjfrTm/IMG-20260417-WA0022.jpg" alt="Dzibaiyyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Ngaji Madrasah Diniyah -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Ngaji Madrasah Diniyah Takmiliyah Awwaliyah</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/ynmxv3xP/IMG-20260417-WA0040.jpg" alt="Madrasah Diniyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/My0SXm3Y/IMG-20260417-WA0036.jpg" alt="Madrasah Diniyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/5XFtv809/IMG-20260417-WA0027.jpg" alt="Madrasah Diniyah" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Ngaji Al-Qur'an -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Ngaji Al-Qur'an</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/v6RRVMxh/IMG-20260417-WA0037.jpg" alt="Ngaji Al-Qur'an" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Santri Berprestasi -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Santri Berprestasi</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/HDK6qJ7D/IMG-20260417-WA0004.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/20rRzvf2/IMG-20260417-WA0069.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/r2MvRF9H/IMG-20260417-WA0065.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/JwLfHBTC/IMG-20260417-WA0064.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/Sw30pSgz/IMG-20260417-WA0063.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/39LzPRCR/IMG-20260417-WA0062.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/x8r1LX9n/IMG-20260417-WA0061.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/bMcKY31g/IMG-20260417-WA0060.jpg" alt="Santri Berprestasi" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Wejangan -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Wejangan / Motivasi</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/yBN0yKRS/IMG-20260417-WA0068.jpg" alt="Wejangan" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/gMpQL4hf/IMG-20260417-WA0070.jpg" alt="Wejangan" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Upacara -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Upacara Hari Santri</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/hJC5Sbb5/IMG-20260417-WA0041.jpg" alt="Upacara Hari Santri" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Foto Bersama -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Foto Bersama</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/zV4mSrqg/IMG-20260417-WA0010.jpg" alt="Foto Bersama" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/5WnPV7Ht/IMG-20260417-WA0017.jpg" alt="Foto Bersama" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/cKtC0bk6/IMG-20260417-WA0066.jpg" alt="Foto Bersama" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+
+            <!-- Healing -->
+            <h3 class="text-2xl font-semibold mb-6 text-birutua">Healing Santri Shibyan</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                <img src="https://i.ibb.co.com/hJBJcb5X/IMG-20260417-WA0054.jpg" alt="Healing Santri Shibyan" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/hJvjkKkP/IMG-20260417-WA0024.jpg" alt="Healing Santri Shibyan" class="rounded-lg shadow-md img-hover w-full h-auto">
+                <img src="https://i.ibb.co.com/jZQ5P8c2/IMG-20260417-WA0006.jpg" alt="Healing Santri Shibyan" class="rounded-lg shadow-md img-hover w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & MEDIA SOSIAL -->
+    <section id="kontak" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-birutua">Kontak & Lokasi</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-birutua">Hubungi Kami</h3>
+                    <p class="text-gray-600">Untuk informasi pendaftaran dan kegiatan, silakan hubungi kami melalui:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-map-marker-alt text-2xl text-birutua"></i>
+                            <div>
+                                <strong>Alamat:</strong>
+                                <p>Ponpes Tarbiyatul Ulum Lisshibyan, Desa Pekuwon, Kecamatan Rengel, Kabupaten Tuban, Jawa Timur.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-clock text-2xl text-birutua"></i>
+                            <div>
+                                <strong>Jam Operasional:</strong>
+                                <p class="text-green-600 font-semibold">SETIAP HARI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-phone text-2xl text-birutua"></i>
+                            <div>
+                                <strong>Telepon/WA:</strong>
+                                <p>+62 857-4610-4956</p>
+                            </div>
+                        </div>
+
+                        <!-- MEDIA SOSIAL RESMI -->
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-whatsapp text-2xl text-green-600"></i>
+                            <div>
+                                <strong>Saluran WhatsApp:</strong>
+                                <p><a href="https://whatsapp.com/channel/0029Vb7l85g9WtByxvdXcv2c" target="_blank" class="text-blue-600 hover:underline">Santri Pondok Pekuwon Lisshibyan</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-instagram text-2xl text-pink-600"></i>
+                            <div>
+                                <strong>Instagram:</strong>
+                                <p><a href="https://www.instagram.com/tarbiyatululumlisshibyan?igsh=MW5tNm95azU0MmE5eQ==" target="_blank" class="text-blue-600 hover:underline">tarbiyatululumlisshibyan</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-facebook text-2xl text-blue-700"></i>
+                            <div>
+                                <strong>Facebook:</strong>
+                                <p><a href="https://www.facebook.com/ponpes.pekuwon" target="_blank" class="text-blue-600 hover:underline">Pp Tarbiyatul Ulum Lisibyan Pekuwon</a></p>
+				                <p><a href="https://www.facebook.com/profile.php?id=100091122821521" target="_blank" class="text-blue-600 hover:underline">ponpestarbiyatululum_lisshibyan</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-tiktok text-2xl text-black"></i>
+                            <div>
+                                <strong>TikTok:</strong>
+                                <p><a href="https://vm.tiktok.com/ZS9L1yYKDJw9Y-ItmBD/" target="_blank" class="text-blue-600 hover:underline">Pondok Pekuwon Lisshibyan</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-youtube text-2xl text-red-600"></i>
+                            <div>
+                                <strong>YouTube:</strong>
+                                <p><a href="https://www.youtube.com/@pptulisshibyan" target="_blank" class="text-blue-600 hover:underline">pptu lisshibyan</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-[400px] bg-gray-200 rounded-xl overflow-hidden shadow relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.444797902658!2d111.9732536269556!3d-7.0743175523012995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e778583121747b7%3A0x944721eedbd1f6f!2sPondok%20Pesantren%20Tarbiyatul%20Ulum%20Lilsibyan!5e0!3m2!1sid!2sid!4v1776513231813!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-birutua text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-2">Pondok Pesantren Tarbiyatul Ulum Lisshibyan</h3>
+            <p class="mb-4">Mencetak Generasi Qur'ani dan Berakhlakul Karimah</p>
+            <p class="text-sm opacity-75">&copy; 2026 Yayasan Tarbiyatul Ulum Pekuwon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT SWIPER -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>
