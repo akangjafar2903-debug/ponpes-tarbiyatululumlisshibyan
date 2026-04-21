@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akangjafar2903-debug.github.io/ponpes-tarbiyatululumlisshibyan/sitemap.xml
